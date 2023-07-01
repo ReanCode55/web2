@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1200">
+
+    <!-- 
+        css link
+    -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sport.css">
+    <link rel="stylesheet" href="./css/casino.css">
+    <link rel="stylesheet" href="./css/lottery.css">
+    <link rel="stylesheet" href="./css/kino.css">
+    <link rel="stylesheet" href="./css/cock.css">
+    <link rel="stylesheet" href="./css/fish.css">
+    <link rel="stylesheet" href="./css/joker.css">
+    <link rel="stylesheet" href="./css/promotion.css">
+
+    <!-- 
+        tailwindcss link
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 
+        jquery link
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 
+        icon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 
+        bootstrap slide link
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- 
+        tailwindcss link
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+    <!-- 
+        icon title link
+    -->
+    <link rel="icon" href="./img/logo/EBET logo.png">
+    <title>E-BET99</title>
+</head>
+<body class="bg">
+    <div class="social-link w-32 fixed">
+        <a href="https://t.me/Ebet99kh">
+            <div class="main-box flex items-center rounded">
+                <i class="fab fa-telegram w-14 h-14 text-3xl text-white flex justify-center items-center"></i>
+                <p class="pl-5 text-xl text-yellow-400 font-bold">Telegram</p>
+            </div>
+        </a>
+    </div>
+    <header class="w-full">
+        <div class="main-box max-w-6xl m-auto flex justify-between items-center">
+            <a href="./index.html">
+                <div class="logo w-36">
+                    <img src="./img/logo/EBET logo.png" alt="" class="w-full">
+                </div>
+            </a>
+            <div class="user-and-time inline-block max-w-2xl">
+                <div class="times py-1 float-right max-w-lg flex justify-between items-center pr-5">
+                    <div id="clockdate">
+                        <div class="clockdate-wrapper flex justify-between items-center">
+                            <ion-icon name="time-outline" size="small" class="text-white font-bold"></ion-icon>
+                            <div id="date" class="text-md text-white font-bold mx-2"></div>
+                            <div id="clock" class="text-md text-white font-bold mx-2"></div>
+                        </div>
+                    </div>
+                    <div class="language w-28 p-1.5 rounded-md bg-yellow-600">
+                        <a href="#" class="flex justify-around items-center text-white font-bold p-1">
+                            <img class="w-8" src="./img/icon/cambodia.png" alt="">&nbsp;KH&nbsp;
+                        </a>
+                    </div>
+                </div>
+                <div class="user py-1 w-full float-left">
+                    <form action="#" method="post">
+                        <input type="text" placeholder="ឈ្មោះអ្នកប្រើប្រាស់" class="border-yellow-500 border-0 outline-0 p-1.5 rounded text-lg w-64">
+                        <input type="text" placeholder="លេខសម្ងាត់" class="border-yellow-500 border-0 outline-0 p-1.5 rounded text-lg w-64">
+                        <button type="submit" class="border-0 outline-0 bg-yellow-600 py-1.5 px-3 rounded text-white text-lg font-bold w-28">ចូលលេង</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="w-full">
+        <div class="menu max-w-5xl m-auto" id="menu">
+            <div class="close-menu hidden px-3 py-4" onclick="closeNav();">
+                <ion-icon name="close-outline" size="small" class="p-1 text-white w-7 h-7 border-2 border-yellow-500 rounded-md bg-green-800"></ion-icon>
+            </div>
+            <ul>
+                <li class="inline-block"><a href="./index.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/10001.svg" alt="" class="w-8 h-8">ទំព័រដើម</a></li>
+                <li class="inline-block"><a href="./sport.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/10002.svg" alt="" class="w-8 h-8">កីឡា</a></li>
+                <li class="inline-block"><a href="./casino.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/10003.svg" alt="" class="w-8 h-8">កាស៊ីណូ</a></li>
+                <li class="inline-block"><a href="./lottery.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/lottery.png" alt="" class="w-8 h-8">ឆ្នោត</a></li>
+                <li class="inline-block"><a href="./kino.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/10004.svg" alt="" class="w-8 h-8">គីណូ</a></li>
+                <li class="inline-block"><a href="./cock.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/10005.svg" alt="" class="w-8 h-8">មាន់ជល់</a></li>
+                <li class="inline-block"><a href="./fish.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/fish.png" alt="" class="w-8 h-8">បាញ់ត្រី</a></li>
+                <li class="inline-block"><a href="./joker.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/10006.svg" alt="" class="w-8 h-8">ជូកឺ</a></li>
+                <li class="inline-block"><a href="./promotion.html" class="flex items-center text-lg text-white font-bold p-2.5"><img src="./img/icon/10007.svg" alt="" class="w-8 h-8">ការផ្តល់ជូន</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 
+        slide
+    -->
+
+    <div class="slide owl-carousel">
+        <div class="images">
+            <img src="./img/banner/1.jpg" alt="">
+        </div>
+        <div class="images">
+            <img src="./img/banner/2.jpg" alt="">
+        </div>
+        <div class="images">
+            <img src="./img/banner/9.jpg" alt="">
+        </div>
+        <div class="images">
+            <img src="./img/banner/10.jpg" alt="">
+        </div>
+        <div class="images">
+            <img src="./img/banner/1.png" alt="">
+        </div>
+        <div class="images">
+            <img src="./img/banner/2.png" alt="">
+        </div>
+    </div>
+
+    <!-- 
+        text-anima
+    -->
+    <div class="trending -mt-6">
+        <div class="box max-w-6xl m-auto px-2 flex ites-center">
+            <ion-icon name="megaphone-outline" size="large" class="mt-1.5 text-white"></ion-icon>
+            <marquee behavior="right" direction="" class="text-white flex items-center py-2 font-medium text-lg">
+                Check out our hello text selection for the very best in unique or custom, handmade pieces from our shops.
+            </marquee>
+        </div>
+    </div>
+
+    <!-- 
+        text-effect
+    -->
+    <div class="text-effect max-w-6xl m-auto py-3">
+        <div class="top flex justify-between items-center max-w-md m-auto">
+            <div class="w-12 h-12 border-yellow-400 border-4 rounded-full flex justify-center items-center text-2xl font-bold text-white">J</div>
+            <div class="w-12 h-12 border-yellow-400 border-4 rounded-full flex justify-center items-center text-2xl font-bold text-white">A</div>
+            <div class="w-12 h-12 border-yellow-400 border-4 rounded-full flex justify-center items-center text-2xl font-bold text-white">C</div>
+            <div class="w-12 h-12 border-yellow-400 border-4 rounded-full flex justify-center items-center text-2xl font-bold text-white">K</div>
+            <div class="w-12 h-12 border-yellow-400 border-4 rounded-full flex justify-center items-center text-2xl font-bold text-white">P</div>
+            <div class="w-12 h-12 border-yellow-400 border-4 rounded-full flex justify-center items-center text-2xl font-bold text-white">O</div>
+            <div class="w-12 h-12 border-yellow-400 border-4 rounded-full flex justify-center items-center text-2xl font-bold text-white">T</div>
+        </div>
+    </div>
+
+    <!-- 
+        count number
+    -->
+    <div class="count-num max-w-6xl m-auto flex justify-center items-center py-2">
+        <strong class="text-5xl text-pink-300 font-bold">USD</strong>
+        <strong class="text-5xl text-pink-300 font-bold" data-start-number="90000" data-end-number="49000000" id="progressive_jackpot">80,031,613</strong>
+    </div>
+    <!-- 
+        blog-1
+    -->
+    <div class="blog-1 max-w-6xl m-auto">
+
+        <!-- 
+            row-1
+        -->
+
+        <div class="main-box-1 inline-block w-full">
+            <div class="box-1 p-1 w-1/3 float-left">
+                <a href="./sport.html">
+                    <div class="box my-1 w-full relative rounded-md">
+                        <div class="images w-full overflow-hidden">
+                            <img src="./img/blog/10010.png" alt="" class="w-full h-full">
+                        </div>
+                        <div class="des absolute bottom-0 left-0 w-full">
+                            <h1 class="text-center text-xl text-yellow-400 font-bold py-2">កីឡា</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="box-2 p-1 w-1/3 float-left">
+                <a href="./casino.html">
+                    <div class="box my-1 w-full relative rounded-md">
+                        <div class="images w-full overflow-hidden">
+                            <img src="./img/blog/10011.png" alt="" class="w-1/2 m-auto">
+                        </div>
+                        <div class="des absolute bottom-0 left-0 w-full">
+                            <h1 class="text-center text-xl text-yellow-400 font-bold py-2">កាស៊ីណូ</h1>
+                        </div>
+                    </div>
+                </a>
+                <a href="./lottery.html">
+                    <div class="box my-1 w-full relative rounded-md">
+                        <div class="images w-full overflow-hidden">
+                            <img src="./img/blog/10008.png" alt="" class="w-1/2 m-auto">
+                        </div>
+                        <div class="des absolute bottom-0 left-0 w-full">
+                            <h1 class="text-center text-xl text-yellow-400 font-bold py-2">ឆ្នោត</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="box-3 p-1 w-1/3 float-left">
+                <a href="./fish.html">
+                    <div class="box my-1 w-full relative rounded-md">
+                        <div class="images w-full overflow-hidden">
+                            <img src="./img/blog/10012.png" alt="" class="w-1/2 m-auto">
+                        </div>
+                        <div class="des absolute bottom-0 left-0 w-full">
+                            <h1 class="text-center text-xl text-yellow-400 font-bold py-2">បាញ់ត្រី</h1>
+                        </div>
+                    </div>
+                </a>
+                <a href="./kino.html">
+                    <div class="box my-1 w-full relative rounded-md">
+                        <div class="images w-full overflow-hidden">
+                            <img src="./img/blog/10013.png" alt="" class="w-1/2 m-auto">
+                        </div>
+                        <div class="des absolute bottom-0 left-0 w-full">
+                            <h1 class="text-center text-xl text-yellow-400 font-bold py-2">គីណូ</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- 
+            row-2
+        -->
+
+        <div class="main-box-2 grid grid-cols-12 -mt-3">
+            <div class="col-span-4 p-1">
+                <a href="./cock.html">
+                    <div class="box rounded-md relative">
+                        <div class="images">
+                            <img src="./img/blog/10014.png" alt="" class="w-44 m-auto">
+                        </div>
+                        <div class="des absolute bottom-0 left-0 w-full">
+                            <h1 class="text-center text-xl text-yellow-400 font-bold py-2">មាន់ជល់</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-span-4 p-1">
+                <a href="./joker.html">
+                    <div class="box rounded-md relative">
+                        <div class="images">
+                            <img src="./img/blog/10015.png" alt="" class="w-44 m-auto">
+                        </div>
+                        <div class="des absolute bottom-0 left-0 w-full">
+                            <h1 class="text-center text-xl text-yellow-400 font-bold py-2">ជូកឺ</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-span-4 p-1">
+                <a href="./promotion.html">
+                    <div class="box rounded-md relative">
+                        <div class="images">
+                            <img src="./img/blog/10016.png" alt="" class="w-44 m-auto">
+                        </div>
+                        <div class="des absolute bottom-0 left-0 w-full">
+                            <h1 class="text-center text-xl text-yellow-400 font-bold py-2">ការផ្តល់ជូន</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        footer
+    -->
+    <footer>
+        <div class="main-box max-w-6xl m-auto grid grid-cols-12 gap-5">
+            <div class="col-span-8">
+                <div class="box">
+                    <h1 class="text-center text-lg text-yellow-400 font-bold py-2 border-b-2 border-yellow-400 w-full">អ្នកផ្តល់សេវា</h1>
+                    <div class="link grid grid-cols-12 gap-5 items-center py-3">
+                        <div class="col-span-2">
+                            <a href="https://f88.live/member">
+                                <img src="./img/client/F88.png" class="w-20 m-auto">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="#">
+                                <img src="./img/client/G Club.png" class="w-20 m-auto">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="https://m99.asia/">
+                                <img src="./img/client/M99.png" class="w-20 m-auto">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="http://appinfo.pussy888.com/">
+                                <img src="./img/client/Pussy888.png" class="w-full">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="https://m-918kiss.com/">
+                                <img src="./img/client/981kiss.png" class="w-full">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="https://www.betwos2.com/index.jsp">
+                                <img src="./img/client/Betwos.png" class="w-full">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="https://www.ibet288.com/">
+                                <img src="./img/client/ibet789.png" class="w-full">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="https://www.joker388.net/">
+                                <img src="./img/client/Joker123.png" class="w-full">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="https://www.live22.com/Login">
+                                <img src="./img/client/live22.png" class="w-full">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="http://m.mega688.com/mega/index.html">
+                                <img src="./img/client/Mega888.png" class="w-full">
+                            </a>
+                        </div>
+                        <div class="col-span-2">
+                            <a href="https://www.777beer.com/Default8.aspx?lang=EN-US">
+                                <img src="./img/client/UFAbet.png" class="w-full">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-4">
+                <div class="box">
+                    <h1 class="text-center text-lg text-yellow-400 font-bold py-2 border-b-2 border-yellow-400 w-full">ធនាគារដែលពេញចិត្ត</h1>
+                    <div class="icon grid grid-cols-12 mt-2">
+                        <div class="col-span-3">
+                            <a href="#">
+                                <div class="box">
+                                    <div class="images w-full overflow-hidden">
+                                        <img src="./img/bank/aba.png" alt="" class="w-20 m-auto rounded-md">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-span-3">
+                            <a href="#">
+                                <div class="box">
+                                    <div class="images w-full overflow-hidden">
+                                        <img src="./img/bank/aceleda.png" alt="" class="w-20 m-auto rounded-md">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-span-3">
+                            <a href="#">
+                                <div class="box">
+                                    <div class="images w-full overflow-hidden">
+                                        <img src="./img/bank/wing.png" alt="" class="w-20 m-auto rounded-md">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-span-3">
+                            <a href="#">
+                                <div class="box">
+                                    <div class="images w-full overflow-hidden">
+                                        <img src="./img/bank/trumoney.png" alt="" class="w-20 m-auto rounded-md">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+        <div class="privacy max-w-6xl m-auto border-t-2 border-yellow-400">
+            <h1 class="text-md text-center text-yellow-400 font-bold py-2">2022, Copyright ©EBET99 រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង</h1>
+        </div>
+    </footer>
+    <!-- 
+        script link
+    -->
+    <script src="./script.js"></script>
+</body>
+</html>

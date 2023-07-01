@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif,'Battambang'
+}
+.blog-cock .main-box .col-span-6 .box{
+    box-shadow: 0px 0px 5px #120f1d, 0px 0px 20px #206e00 inset;
+    border: 1px solid #fffc02;
+    transition: all 0.3s;
+}
+.blog-cock .main-box .col-span-6 .box .des h1{
+    background: linear-gradient( 0deg, #4caf50 0%, #8bc34a 80%, #4caf50 100%);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.blog-cock .main-box .col-span-6 .box .images{
+    vertical-align: middle;
+}
+.line{
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(to left, rgba(0, 0, 0, 0) 1%, #fffc02 50%, rgba(0, 0, 0, 0) 100%);
+    background-size: 100% 3px;
+    background-position: 0% 0%, 0% 100%;
+    background-repeat: no-repeat;
+    height: 0.3em;
+    margin: 0 auto;
+}
+.blog-cock .main-box .col-span-6 .box:hover{
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.blog-cock .main-box .col-span-6 .box:hover .overlay{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    left: 0;
+}
+.overlay{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    z-index: 36;
+    background-color: rgb(150 102 183 / 43%);
+    overflow: hidden;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border: 1px solid #206f00;
+    box-shadow: 1px 5px 35px #206f00 inset;
+    border-radius: 10px;
+}
+.overlay a{
+    display: block;
+    margin: -55px auto;
+    width: 110px;
+    line-height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    font-weight: bold;
+    z-index: 1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #fbd62b;
+    text-decoration: none;
+    font-size: 16px;
+    background: #237800;
+    border-radius: 100%;
+    box-shadow: 0 0px 15px rgb(32 111 0), 0 0px 5px rgb(54 51 47) inset;
+    text-shadow: 0px 2px 5px #227400, 2px 0px 4px #217100, 0px 0px 10px #206f00;
+}
+
